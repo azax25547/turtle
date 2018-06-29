@@ -1,0 +1,44 @@
+{
+	"name": "turtle",
+	"version": "1.0.0",
+	"description": "A minimalist and easy to use CSS framework.",
+	"homepage": "",
+	"repository": "xedtech/turtle",
+	"license": "MIT",
+	"author": "Palash Bauri",
+	"main": "dist/turtle.css",
+	"keywords": [
+		"bootstrap",
+		"css",
+		"css3",
+		"flexbox",
+		"front-end",
+		"framework",
+		"html",
+		"html5",
+		"less",
+		"responsive",
+		"mobile",
+		"mobile-first",
+		"postcss",
+		"responsive",
+		"sass",
+		"scss",
+		"stylus"
+	],
+	"dependencies": {
+		"normalize.css": "~5.0.0"
+	},
+	"devDependencies": {
+		"gulp": "^4.0",
+		"gulp-clean-css": "^2.0.10",
+		"gulp-sass": "^2.3.1",
+		"gulp-cli": "^1.2.1",
+		"gulp-concat": "latest",
+		"gulp-header": "^1.8.2",
+		"gulp-size": "^2.1.0"
+	},
+	"scripts": {
+		"start": "gulp"
+	}
+}

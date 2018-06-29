@@ -1,0 +1,146 @@
+@charset "UTF-8"
+
+$content-width: 1000px !default
+$breakpoint: 799px !default
+$nav-height: 5.2rem !default
+$nav-background: #f4f5f6 !default
+$nav-font-color: $color-primary !default
+$link-hover-color: $color-primary !default
+$navbar-brand-text : #606c76 !default
+
+.navigation
+  height: $nav-height
+  background: $nav-background
+  // margin-left: 15px
+  // margin-right: 15px
+
+.brand
+  position: absolute
+  padding-left: 20px
+  float: left
+  line-height: $nav-height
+  text-transform: uppercase
+  font-size: 1.4em
+  a
+    color: $navbar-brand-text
+    text-decoration: none
+    &:visited
+      color: $navbar-brand-text
+      text-decoration: none
+
+.nav-container
+  max-width: $content-width
+  margin: 0 auto
+
+nav
+  float: right
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      float: left
+      position: relative
+      a
+        display: block
+        padding: 0 20px
+        line-height: $nav-height
+        background: $nav-background
+        color: $nav-font-color
+        text-decoration: none
+        &:visited
+          display: block
+          padding: 0 20px
+          line-height: $nav-height
+          background: $nav-background
+          color: $nav-font-color
+          text-decoration: none
+        &:hover, &:visited:hover
+          background: $link-hover-color
+          color: $color-initial
+        &:not(:only-child):after, &:visited:not(:only-child):after
+          padding-left: 4px
+          content: ' ▾'
+      ul li
+        min-width: 190px
+        a
+          padding: 15px
+          line-height: 20px
+
+.nav-dropdown
+  position: absolute
+  display: none
+  z-index: 1
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15)
+
+/* Mobile navigation
+
+.nav-mobile
+  display: none
+  position: absolute
+  top: 0
+  right: 0
+  background: $nav-background
+  height: $nav-height
+  width: $nav-height
+
+@media only screen and (max-width: 798px)
+  .nav-mobile
+    display: block
+  nav
+    width: 100%
+    padding: $nav-height 0 15px
+    ul
+      display: none
+      li
+        float: none
+        a
+          padding: 15px
+          line-height: 20px
+        ul li a
+          padding-left: 30px
+  .nav-dropdown
+    position: static
+
+@media screen and (min-width: $breakpoint)
+  .nav-list
+    display: block !important
+
+#nav-toggle
+  position: absolute
+  left: 18px
+  top: 22px
+  cursor: pointer
+  padding: 10px 35px 16px 0px
+  span
+    cursor: pointer
+    border-radius: 1px
+    height: 5px
+    width: 35px
+    background: $nav-font-color
+    position: absolute
+    display: block
+    content: ''
+    transition: all 300ms ease-in-out
+    &:before, &:after
+      cursor: pointer
+      border-radius: 1px
+      height: 5px
+      width: 35px
+      background: $nav-font-color
+      position: absolute
+      display: block
+      content: ''
+      transition: all 300ms ease-in-out
+    &:before
+      top: -10px
+    &:after
+      bottom: -10px
+  &.active span
+    background-color: transparent
+    &:before, &:after
+      top: 0
+    &:before
+      transform: rotate(45deg)
+    &:after
+      transform: rotate(-45deg)
